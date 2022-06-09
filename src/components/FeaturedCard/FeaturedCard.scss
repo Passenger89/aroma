@@ -1,0 +1,25 @@
+.card {
+  width: 100%;
+  max-width: 17.5rem;
+  height: 22rem;
+  overflow: auto;
+  border: 1px solid black;
+
+  .image {
+    position: relative;
+    flex-basis: 50%;
+    background: center / cover no-repeat;
+
+    h4 {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.5rem;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    margin: 1.5rem;
+  }
+}

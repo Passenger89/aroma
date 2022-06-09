@@ -1,0 +1,9 @@
+@use '../../scss/variables' as var;
+
+.mainButton {
+  background-color: var.$clr-gold-blend;
+  margin-inline: auto;
+  height: 3.125rem;
+  width: 17.5rem;
+  color: var.$clr-flat-white;
+}
