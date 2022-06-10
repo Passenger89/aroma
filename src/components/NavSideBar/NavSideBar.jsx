@@ -14,7 +14,7 @@ const NavSideBar = ({ sidebar, toggleSidebar }) => {
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className={item.className}>
-                <Link to={item.path}>
+                <Link to={item.path} onClick={toggleSidebar}>
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>
