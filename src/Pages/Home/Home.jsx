@@ -1,8 +1,9 @@
 import React from 'react'
+import ScrollIntoView from 'react-scroll-into-view'
 import hero from '../../assets/images/hero.gif'
 import barista from '../../assets/images/barista.jpg'
 import './Home.scss'
-import ArrowButton from '../../components/ArrowButton/ArrowButton.jsx'
+import ArrowButtonDown from '../../components/ArrowButtonDown/ArrowButtonDown.jsx'
 import MainButton from '../../components/MainButton/MainButton.jsx'
 import FeaturedSection from '../../components/FeaturedSection/FeaturedSection.jsx'
 
@@ -23,7 +24,9 @@ const Home = () => {
                 Each bean is carefully sourced and lovingly brewed to bring
                 nothing but perfection to your cup of coffee.
               </p>
-              <ArrowButton />
+              <ScrollIntoView selector='#featured'>
+                <ArrowButtonDown />
+              </ScrollIntoView>
             </div>
             <div className='right'>
               <img
@@ -35,7 +38,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='container flex column gap'>
+      <div className='container flex column gap' id='featured'>
         <FeaturedSection />
         <MainButton label='The Collection' />
       </div>

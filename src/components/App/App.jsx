@@ -15,7 +15,7 @@ const App = () => {
   const toggleSidebar = () => setSidebar(!sidebar)
   return (
     <Router>
-      <Header />
+      <Header id='header' />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/gallery' element={<Gallery />} />
