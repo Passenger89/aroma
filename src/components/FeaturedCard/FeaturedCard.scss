@@ -1,9 +1,12 @@
+@use '../../scss/variables' as var;
+
 .card {
   width: 100%;
   max-width: 17.5rem;
   height: 22rem;
   overflow: auto;
   border: 1px solid black;
+  background-color: var.$clr-flat-white;
 
   .image {
     position: relative;

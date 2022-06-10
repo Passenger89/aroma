@@ -1,0 +1,66 @@
+@use '../../scss/variables' as var;
+
+.navbar {
+  background-color: var.$clr-flat-white;
+  height: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+}
+
+.menu-bars {
+  color: var.$clr-flat-white;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 5px;
+  left: 14rem;
+}
+
+.nav-menu {
+  background-color: var.$clr-flat-white;
+  width: 15.625rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  //   left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-menu-items {
+  width: 60%;
+}
+
+.nav-text {
+  display: flex;
+  height: 60px;
+  width: 100%;
+
+  a {
+    color: var.$clr-medium-roast;
+    font-weight: 600;
+    font-size: 1.125rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 16px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: aqua;
+    }
+  }
+}

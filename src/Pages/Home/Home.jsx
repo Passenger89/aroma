@@ -16,10 +16,10 @@ const Home = () => {
           alt='coffee pouring into glass cup'
         />
         <div className='container flex column gap'>
-          <h1 className='fs-500 fw-600'>Average Joe? Not exactly...</h1>
+          <h1 className='fs-600 fw-600'>Average Joe? Not exactly...</h1>
           <div className='content flex'>
             <div className='left flex column'>
-              <p className='fs-300 fw-600'>
+              <p className='fs-300 fw-500 clr-medium-roast'>
                 Each bean is carefully sourced and lovingly brewed to bring
                 nothing but perfection to your cup of coffee.
               </p>

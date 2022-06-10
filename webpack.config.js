@@ -55,9 +55,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       // Will rebuild the dist folder
-      title: 'React Webpack App',
+      title: 'Aroma',
       filename: 'index.html',
       template: 'src/index.html',
+      favicon: './src/assets/images/favicon.png',
     }),
   ],
 }

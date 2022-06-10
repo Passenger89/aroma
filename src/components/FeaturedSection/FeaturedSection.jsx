@@ -8,6 +8,10 @@ import citrusRoast from '../../assets/images/beans/Beans - citrus.jpg'
 const FeaturedSection = () => {
   return (
     <section className='section flex column gap'>
+      <h2 className='section-title fs-500 fw-600'>
+        Here's what we've been drinking lately...
+      </h2>
+
       <FeaturedCard
         image={mellowRoast}
         title='Mellow Roast'

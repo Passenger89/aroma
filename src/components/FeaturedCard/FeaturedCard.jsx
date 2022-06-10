@@ -10,7 +10,7 @@ const FeaturedCard = ({ title, description, image }) => {
       </div>
       <div className='content gap'>
         <h2 className='clr-medium-roast fs-500'>{title}</h2>
-        <p className='clr-capuccino fs-400'>{description}</p>
+        <p className='clr-medium-roast fs-400'>{description}</p>
       </div>
     </div>
   )

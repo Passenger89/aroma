@@ -4,6 +4,7 @@ import Header from '../Header/Header.jsx'
 import Home from '../../Pages/Home/Home.jsx'
 import '../../scss/main.scss'
 import NavBar from '../NavBar/NavBar.jsx'
+import NavSideBar from '../NavSideBar/NavSideBar.jsx'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
       </Routes>
       <NavBar pageName='Aroma' />
+      <NavSideBar />
     </Router>
   )
 }
