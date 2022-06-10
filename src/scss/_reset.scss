@@ -39,8 +39,10 @@ picture {
 input,
 button,
 textarea,
-select {
+select,
+a {
   font: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 button {

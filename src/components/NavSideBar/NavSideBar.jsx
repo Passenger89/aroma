@@ -6,17 +6,9 @@ import { SidebarData } from './SidebarData.jsx'
 import './NavSideBar.scss'
 import ProfileNavItem from '../ProfileNavItem/ProfileNavItem.jsx'
 
-const NavSideBar = () => {
-  const [sidebar, setSidebar] = useState(false)
-
-  const toggleSidebar = () => setSidebar(!sidebar)
+const NavSideBar = ({ sidebar, toggleSidebar }) => {
   return (
     <>
-      <div className='navbar'>
-        <Link to='#' className='menu-bars'>
-          <HiIcons.HiMenuAlt2 onClick={toggleSidebar} />
-        </Link>
-      </div>
       <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
         <ul className='nav-menu-items'>
           {SidebarData.map((item, index) => {
@@ -31,7 +23,7 @@ const NavSideBar = () => {
           })}
           <li className='navbar-toggle'>
             <Link to='#' className='menu-bars'>
-              <HiIcons.HiMenuAlt2 />
+              <HiIcons.HiMenuAlt2 onClick={toggleSidebar} />
             </Link>
           </li>
         </ul>

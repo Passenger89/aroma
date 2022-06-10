@@ -28,17 +28,18 @@
   align-items: center;
   position: fixed;
   top: 0;
-  //   left: -100%;
+  left: 0;
+  transform: translateX(-100vw);
   transition: 850ms;
 }
 
 .nav-menu.active {
-  left: 0;
+  transform: translateX(0);
   transition: 350ms;
 }
 
 .nav-menu-items {
-  width: 60%;
+  width: 70%;
 }
 
 .nav-text {
@@ -57,10 +58,13 @@
     padding-inline: 16px;
     border-radius: 4px;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+  }
+}
 
-    &:hover {
-      background-color: aqua;
-    }
+//Only targets devices with a pointing device.
+@media (hover: hover) {
+  .nav-text > a:hover {
+    background-color: var.$clr-toasted-almond;
   }
 }
