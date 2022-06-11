@@ -12,10 +12,10 @@ import '../../scss/main.scss'
 
 const App = () => {
   const [sidebar, setSidebar] = useState(false)
-  const toggleSidebar = () => setSidebar(!sidebar)
   return (
     <Router>
       <Header id='header' />
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/gallery' element={<Gallery />} />
@@ -23,16 +23,8 @@ const App = () => {
         <Route path='/store' element={<Store />} />
         <Route path='/settings' element={<Settings />} />
       </Routes>
-      <NavBar
-        pageName='Aroma'
-        sidebar={sidebar}
-        toggleSidebar={toggleSidebar}
-      />
-      <NavSideBar
-        sidebar={sidebar}
-        setSidebar={setSidebar}
-        toggleSidebar={toggleSidebar}
-      />
+      <NavBar pageName='Aroma' sidebar={sidebar} toggleSidebar={setSidebar} />
+      <NavSideBar sidebar={sidebar} toggleSidebar={setSidebar} />
     </Router>
   )
 }

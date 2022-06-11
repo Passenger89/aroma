@@ -17,7 +17,11 @@ const NavSideBar = ({ sidebar, toggleSidebar }) => {
         <ul className='nav-menu-items'>
           {SidebarData.map((item, index) => {
             return (
-              <li key={index} className={item.className}>
+              <li
+                onClick={() => toggleSidebar(!sidebar)}
+                key={index}
+                className={item.className}
+              >
                 <Link to={item.path}>
                   {item.icon}
                   <span>{item.title}</span>
@@ -27,7 +31,7 @@ const NavSideBar = ({ sidebar, toggleSidebar }) => {
           })}
           <li className='navbar-toggle'>
             <Link to='#' className='menu-bars'>
-              <HiIcons.HiMenuAlt2 onClick={toggleSidebar} />
+              <HiIcons.HiMenuAlt2 onClick={() => toggleSidebar(!sidebar)} />
             </Link>
           </li>
         </ul>
