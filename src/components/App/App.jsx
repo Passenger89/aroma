@@ -28,7 +28,11 @@ const App = () => {
         sidebar={sidebar}
         toggleSidebar={toggleSidebar}
       />
-      <NavSideBar sidebar={sidebar} toggleSidebar={toggleSidebar} />
+      <NavSideBar
+        sidebar={sidebar}
+        setSidebar={setSidebar}
+        toggleSidebar={toggleSidebar}
+      />
     </Router>
   )
 }

@@ -1,20 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import * as HiIcons from 'react-icons/hi'
-import * as AiIcons from 'react-icons/ai'
 import { SidebarData } from './SidebarData.jsx'
-import './NavSideBar.scss'
 import ProfileNavItem from '../ProfileNavItem/ProfileNavItem.jsx'
+import { useClickOutside } from '../../Hooks/useClickOutside.jsx'
+import * as HiIcons from 'react-icons/hi'
+import './NavSideBar.scss'
 
 const NavSideBar = ({ sidebar, toggleSidebar }) => {
+  const sidebarRef = useClickOutside(toggleSidebar)
   return (
     <>
-      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+      <nav
+        ref={sidebarRef}
+        className={sidebar ? 'nav-menu active' : 'nav-menu'}
+      >
         <ul className='nav-menu-items'>
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className={item.className}>
-                <Link to={item.path} onClick={toggleSidebar}>
+                <Link to={item.path}>
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>

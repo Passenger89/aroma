@@ -2,7 +2,6 @@ import React from 'react'
 import './FeaturedCard.scss'
 
 const FeaturedCard = ({ title, description, image }) => {
-  console.log(image)
   return (
     <div className='card flex column br-2'>
       <div className='image' style={{ backgroundImage: `url('${image}')` }}>
