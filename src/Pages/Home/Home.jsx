@@ -6,6 +6,7 @@ import './Home.scss'
 import ArrowButtonDown from '../../components/ArrowButtonDown/ArrowButtonDown.jsx'
 import MainButton from '../../components/MainButton/MainButton.jsx'
 import FeaturedSection from '../../components/FeaturedSection/FeaturedSection.jsx'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -40,7 +41,9 @@ const Home = () => {
       </div>
       <div className='container flex column gap' id='featured'>
         <FeaturedSection />
-        <MainButton label='The Collection' />
+        <Link to={'/Store'} style={{ display: 'contents' }}>
+          <MainButton label='The Collection' />
+        </Link>
       </div>
     </div>
   )

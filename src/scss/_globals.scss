@@ -26,6 +26,13 @@ body {
   display: flex;
 }
 
+.space-betweenX {
+  justify-content: space-between;
+}
+.space-betweenY {
+  align-items: space-between;
+}
+
 .column {
   flex-direction: column;
 }
@@ -73,6 +80,10 @@ body {
 
 .clr-capuccino {
   color: var.$clr-capuccino;
+}
+
+.clr-gold-blend {
+  color: var.$clr-gold-blend;
 }
 
 .bg-dark {

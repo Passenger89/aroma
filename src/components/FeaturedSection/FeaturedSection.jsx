@@ -1,5 +1,5 @@
 import React from 'react'
-import FeaturedCard from '../FeaturedCard/FeaturedCard.jsx'
+import Card from '../Card/Card.jsx'
 import './FeaturedSection.scss'
 import mellowRoast from '../../assets/images/beans/Beans - mellow.jpg'
 import darkRoast from '../../assets/images/beans/Beans - dark.jpg'
@@ -12,20 +12,29 @@ const FeaturedSection = () => {
         Here's what we've been drinking lately...
       </h2>
 
-      <FeaturedCard
+      <Card
         image={mellowRoast}
-        title='Mellow Roast'
+        name='Mellow Roast'
+        country='Colombia'
         description='Hints of caramel and notes of chocolate.'
+        price={`£7.50`}
+        featured
       />
-      <FeaturedCard
+      <Card
         image={darkRoast}
-        title='Dark Roast'
-        description='Rich and deep. For the devotees looking for a coffee that can touch the soul and soothe the heart.'
+        name='Dark Roast'
+        country='Mexico'
+        description='Rich and deep. For the devotees looking for a coffee that can touch the soul.'
+        price={`£7.50`}
+        featured
       />
-      <FeaturedCard
+      <Card
         image={citrusRoast}
-        title='Citrus Roast'
+        name='Citrus Roast'
+        country='Thailand'
         description='Fruity. A blackcurrant undertone with subtle notes of cranberry.'
+        price={`£7.50`}
+        featured
       />
     </section>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header.jsx'
 import NavBar from '../NavBar/NavBar.jsx'
 import NavSideBar from '../NavSideBar/NavSideBar.jsx'
@@ -15,7 +15,6 @@ const App = () => {
   return (
     <Router>
       <Header id='header' />
-
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/gallery' element={<Gallery />} />
@@ -23,7 +22,7 @@ const App = () => {
         <Route path='/store' element={<Store />} />
         <Route path='/settings' element={<Settings />} />
       </Routes>
-      <NavBar pageName='Aroma' sidebar={sidebar} toggleSidebar={setSidebar} />
+      <NavBar sidebar={sidebar} toggleSidebar={setSidebar} />
       <NavSideBar sidebar={sidebar} toggleSidebar={setSidebar} />
     </Router>
   )
