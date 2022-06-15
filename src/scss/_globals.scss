@@ -33,16 +33,19 @@ body {
   align-items: space-between;
 }
 
+.centeredX {
+  justify-content: center;
+}
+.centeredY {
+  align-items: center;
+}
+
 .column {
   flex-direction: column;
 }
 
 .gap {
   gap: var(--gap, 1rem);
-}
-
-.flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
 }
 
 .container {
