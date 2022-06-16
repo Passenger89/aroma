@@ -7,7 +7,7 @@ import './Store.scss'
 const Store = () => {
   useScrollToTop()
   return (
-    <div className='page_container container'>
+    <div className='margin-block container'>
       <h1>The Collection</h1>
       <div className='flex column gap centeredY'>
         {StoreData.map(({ image, name, country, description, price }) => {

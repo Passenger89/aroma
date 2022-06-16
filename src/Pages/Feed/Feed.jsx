@@ -1,9 +1,20 @@
 import React from 'react'
+import FeedCard from '../../components/FeedCard/FeedCard.jsx'
+import { data } from '../../components/FeedCard/FeedCardData.jsx'
 
 const Feed = () => {
+  const feedCard = data.map(({ id, avatar, name, text, image }) => (
+    <FeedCard
+      key={id}
+      avatarImage={avatar}
+      name={name}
+      text={text}
+      image={image}
+    />
+  ))
   return (
-    <div className='feed'>
-      <h1>Feed</h1>
+    <div className='margin-block container'>
+      <div className='flex column gap centeredY'>{feedCard}</div>
     </div>
   )
 }

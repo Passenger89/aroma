@@ -33,7 +33,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/, // Any files that end with this extension, apply following loaders.
+        test: /\.scss|css$/, // Any files that end with this extension, apply following loaders.
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {

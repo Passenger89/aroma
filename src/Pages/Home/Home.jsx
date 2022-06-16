@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className='page_container flex column gap'>
+    <div className='margin-bottom flex column gap'>
       <div className='hero'>
         <img
           className='hero__image'

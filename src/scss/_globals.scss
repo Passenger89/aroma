@@ -15,7 +15,12 @@ body {
 
 /* general */
 
-.page_container {
+.margin-block {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.margin-bottom {
   margin-bottom: 5rem;
 }
 
@@ -45,7 +50,7 @@ body {
 }
 
 .gap {
-  gap: var(--gap, 1rem);
+  gap: var.$gap;
 }
 
 .container {
@@ -167,6 +172,10 @@ body {
 }
 .br-3 {
   border-radius: 20px;
+}
+
+.box-shadow {
+  box-shadow: var.$box-shadow;
 }
 
 /* ----------------- */

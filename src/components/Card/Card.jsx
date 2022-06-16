@@ -4,7 +4,7 @@ import './Card.scss'
 
 const Card = ({ image, name, country, description, price, featured }) => {
   return (
-    <div className='card flex column br-2'>
+    <div className='card flex column br-2 box-shadow'>
       <div className='image' style={{ backgroundImage: `url('${image}')` }}>
         {featured && <h4 className='uppercase fw-800 clr-white'>featured</h4>}
       </div>

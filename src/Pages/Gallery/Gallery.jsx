@@ -8,7 +8,7 @@ const Gallery = () => {
   useFetchImages('cafe', images, setImages)
 
   return (
-    <div className='page_container' style={{ marginTop: '1rem' }}>
+    <div className='margin-block'>
       <ImageList images={images} />
     </div>
   )

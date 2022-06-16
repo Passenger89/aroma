@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { usePathName } from '../../Hooks/usePathName.jsx'
 import './Header.scss'
 import logo from '../../assets/svgs/logo.svg'
@@ -10,7 +11,9 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='container'>
-        <img src={logo} alt='logo' />
+        <Link to='/'>
+          <img src={logo} alt='logo' />
+        </Link>
         {pathname === 'Store' && (
           <img className='shoppingbag' src={shoppingBag} alt='' />
         )}
