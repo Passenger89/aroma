@@ -1,7 +1,7 @@
 @use '../../scss/variables' as var;
 
 .mainButton {
-  background-color: var.$clr-gold-blend;
+  background-color: var.$clr-medium-roast;
   margin-inline: auto;
   height: 3.125rem;
   width: 80%;
@@ -10,6 +10,6 @@
 
 @media (hover: hover) {
   .mainButton:hover {
-    background-color: var.$clr-toasted-almond;
+    background-color: var.$clr-gold-blend;
   }
 }
