@@ -31,6 +31,13 @@ body {
   display: flex;
 }
 
+.flex-startX {
+  justify-content: start;
+}
+.flex-startY {
+  align-items: start;
+}
+
 .space-betweenX {
   justify-content: space-between;
 }
@@ -51,6 +58,10 @@ body {
 
 .gap {
   gap: var.$gap;
+}
+
+.padded {
+  padding: 1rem;
 }
 
 .container {
