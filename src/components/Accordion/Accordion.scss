@@ -1,0 +1,24 @@
+@use '../../scss//variables' as var;
+
+.accordion {
+  .item {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+
+    .title {
+      color: var.$clr-medium-roast;
+    }
+    .content {
+      color: var.$clr-dark-roast;
+      display: none; //! LOOK INTO THIS FOR A11Y
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+      cursor: pointer;
+    }
+    .content.show {
+      height: auto;
+      display: block;
+      transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+  }
+}

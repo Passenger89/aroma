@@ -4,7 +4,7 @@ import * as AiIcons from 'react-icons/ai'
 import * as FaIcons from 'react-icons/fa'
 import * as IoIcons from 'react-icons/io'
 
-export const ProfileData = [
+export const AccountData = [
   {
     id: 'name',
     icon: <FaIcons.FaUser />,

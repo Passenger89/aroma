@@ -1,14 +1,14 @@
 import React from 'react'
 import MainButton from '../../components/MainButton/MainButton.jsx'
-import { ProfileData } from '../../components/ProfileData/ProfileData.jsx'
-import './Profile.scss'
+import { AccountData } from '../../components/AccountData/AccountData.jsx'
+import './Account.scss'
 
-const Profile = () => {
+const Account = () => {
   return (
     <div className='flex column' onSubmit={e => e.preventDefault()}>
       <form className='container flex gap column margin-block'>
         <ul className='flex column gap'>
-          {ProfileData.map((item, index) => {
+          {AccountData.map((item, index) => {
             return (
               <li
                 key={index}
@@ -33,4 +33,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default Account

@@ -9,8 +9,9 @@ import Feed from '../../Pages/Feed/Feed.jsx'
 import Store from '../../Pages/Store/Store.jsx'
 import Settings from '../../Pages/Settings/Settings.jsx'
 import '../../scss/main.scss'
-import Profile from '../../Pages/Profile/Profile.jsx'
+import Account from '../../Pages/Account/Account.jsx'
 import Notifications from '../../Pages/Notifications/Notifications.jsx'
+import Help from '../../Pages/Help/Help.jsx'
 
 const App = () => {
   const [sidebar, setSidebar] = useState(false)
@@ -23,10 +24,9 @@ const App = () => {
         <Route path='/feed' element={<Feed />} />
         <Route path='/store' element={<Store />} />
         <Route path='/settings' element={<Settings />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/account' element={<Account />} />
         <Route path='/notifications' element={<Notifications />} />
-        {/* <Route path='account' element={<Account />} /> */}
-        {/* <Route path='help' element={<Help />} /> */}
+        <Route path='help' element={<Help />} />
       </Routes>
       <NavBar sidebar={sidebar} toggleSidebar={setSidebar} />
       <NavSideBar sidebar={sidebar} toggleSidebar={setSidebar} />
