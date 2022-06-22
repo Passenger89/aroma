@@ -2,7 +2,7 @@ import React from 'react'
 import ScrollIntoView from 'react-scroll-into-view'
 import hero from '../../assets/images/hero.gif'
 import barista from '../../assets/images/barista.jpg'
-import './Home.scss'
+import styles from './Home.module.scss'
 import ArrowButtonDown from '../../components/ArrowButtonDown/ArrowButtonDown.jsx'
 import MainButton from '../../components/MainButton/MainButton.jsx'
 import FeaturedSection from '../../components/FeaturedSection/FeaturedSection.jsx'
@@ -11,16 +11,16 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div className='margin-bottom flex column gap'>
-      <div className='hero'>
+      <div className={styles.hero}>
         <img
           className='hero__image'
           src={hero}
           alt='coffee pouring into glass cup'
         />
-        <div className='container flex column gap'>
+        <div className={`${styles.container} flex column gap`}>
           <h1 className='fs-600 fw-600'>Average Joe? Not exactly...</h1>
-          <div className='content flex'>
-            <div className='left flex column'>
+          <div className={`${styles.content} flex`}>
+            <div className={`${styles.left} flex column`}>
               <p className='fs-300 fw-500 clr-medium-roast'>
                 Each bean is carefully sourced and lovingly brewed to bring
                 nothing but perfection to your cup of coffee.
@@ -29,7 +29,7 @@ const Home = () => {
                 <ArrowButtonDown />
               </ScrollIntoView>
             </div>
-            <div className='right'>
+            <div className={styles.right}>
               <img
                 className='br-1'
                 src={barista}

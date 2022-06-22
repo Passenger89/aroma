@@ -13,6 +13,7 @@ import Beans12 from '../../assets/images/beans/Beans12.jpg'
 
 export const StoreData = [
   {
+    id: 1,
     image: Beans1,
     name: 'Beans',
     country: 'Colombia',
@@ -22,6 +23,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 2,
     image: Beans2,
     name: 'Beans',
     country: 'Mexico',
@@ -31,6 +33,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 3,
     image: Beans3,
     name: 'Beans',
     country: 'Thailand',
@@ -40,6 +43,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 4,
     image: Beans4,
     name: 'Beans',
     country: 'Mexico',
@@ -49,6 +53,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 5,
     image: Beans5,
     name: 'Beans',
     country: 'Indonesia',
@@ -58,6 +63,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 6,
     image: Beans6,
     name: 'Beans',
     country: 'Colombia',
@@ -67,6 +73,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 7,
     image: Beans7,
     name: 'Beans',
     country: 'Guatemala',
@@ -76,6 +83,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 8,
     image: Beans8,
     name: 'Beans',
     country: 'Thailand',
@@ -85,6 +93,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 9,
     image: Beans9,
     name: 'Beans',
     country: 'Mexico',
@@ -94,6 +103,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 10,
     image: Beans10,
     name: 'Beans',
     country: 'Brazil',
@@ -103,6 +113,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 11,
     image: Beans11,
     name: 'Beans',
     country: 'Vietnam',
@@ -112,6 +123,7 @@ export const StoreData = [
     classname: 'store-card',
   },
   {
+    id: 12,
     image: Beans12,
     name: 'Beans',
     country: 'Ethiopia',

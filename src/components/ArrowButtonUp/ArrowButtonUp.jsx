@@ -1,10 +1,10 @@
 import React from 'react'
 import downArrow from '../../assets/svgs/down-arrow.svg'
-import './ArrowButtonUp.scss'
+import styles from './ArrowButtonUp.module.scss'
 
 const ArrowButtonUp = () => {
   return (
-    <button className='arrowButtonUp br-1'>
+    <button className={`${styles.arrowButtonUp} br-1`}>
       <img src={downArrow} alt='' />
     </button>
   )

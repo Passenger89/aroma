@@ -1,0 +1,15 @@
+.header {
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #e4bc84;
+    min-height: 4.6875rem;
+  }
+
+  .shoppingbag {
+    position: absolute;
+    right: 1.5rem;
+  }
+}

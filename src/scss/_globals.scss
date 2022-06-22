@@ -24,6 +24,14 @@ body {
   margin-bottom: 5rem;
 }
 
+.margin-inline-auto {
+  margin-inline: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
 .grid {
   display: grid;
 }
@@ -189,6 +197,14 @@ body {
   box-shadow: var.$box-shadow;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 /* ----------------- */
 /* Components        */
 /* ----------------- */
+#modal-root {
+  position: relative;
+  z-index: 999;
+}

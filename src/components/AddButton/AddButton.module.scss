@@ -1,0 +1,16 @@
+@use '../../scss/variables' as var;
+
+.arrowButtonDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var.$clr-medium-roast;
+}
+
+@media (hover: hover) {
+  .arrowButtonDown:hover {
+    background-color: var.$clr-toasted-almond;
+  }
+}

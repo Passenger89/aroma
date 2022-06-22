@@ -1,7 +1,7 @@
 import React from 'react'
 import { SettingsData } from '../../components/SettingsData/SettingsData.jsx'
 import { Link } from 'react-router-dom'
-import './Settings.scss'
+import styles from './Settings.module.scss'
 
 const Settings = () => {
   return (
@@ -12,7 +12,9 @@ const Settings = () => {
             <li key={index} className={item.className}>
               <Link to={item.path}>
                 <button className='flex flex-startX clr-white padded'>
-                  <div className='content-wrapper flex gap centeredY fs-300 fw-600'>
+                  <div
+                    className={`${styles.content__wrapper} flex gap centeredY fs-300 fw-600`}
+                  >
                     {item.icon}
                     {item.title}
                   </div>

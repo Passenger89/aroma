@@ -4,7 +4,7 @@ import { usePathName } from '../../Hooks/usePathName.jsx'
 import ArrowButtonUp from '../ArrowButtonUp/ArrowButtonUp.jsx'
 import BackButton from '../BackButton/BackButton.jsx'
 import menuIcon from '../../assets/svgs/menu-icon.svg'
-import './NavBar.scss'
+import styles from './NavBar.module.scss'
 
 const NavBar = ({ sidebar, toggleSidebar }) => {
   const pathname = usePathName()
@@ -31,8 +31,8 @@ const NavBar = ({ sidebar, toggleSidebar }) => {
     }
   }
   return (
-    <div className='navBar bg-dark'>
-      <div className='container'>
+    <div className={`${styles.navBar} bg-dark`}>
+      <div className={styles.container}>
         <img src={menuIcon} alt='' onClick={() => toggleSidebar(!sidebar)} />
         <h3 className='clr-white'>{pathname}</h3>
 

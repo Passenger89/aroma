@@ -6,41 +6,46 @@ import * as IoIcons from 'react-icons/io'
 
 export const AccountData = [
   {
-    id: 'name',
+    id: 'Name',
     icon: <FaIcons.FaUser />,
-    content: faker.name.findName(),
+    value: faker.name.findName(),
+    type: 'text',
     get className() {
       return this.id
     },
   },
   {
-    id: 'address',
+    id: 'Address',
     icon: <IoIcons.IoIosPin />,
-    content: faker.address.streetAddress(),
+    value: faker.address.streetAddress(),
+    type: 'text',
     get className() {
       return this.id
     },
   },
   {
-    id: 'email',
+    id: 'Email',
     icon: <AiIcons.AiTwotoneMail />,
-    content: faker.internet.email(),
+    value: faker.internet.email(),
+    type: 'email',
     get className() {
       return this.id
     },
   },
   {
-    id: 'number',
+    id: 'Number',
     icon: <FaIcons.FaPhoneAlt />,
-    content: faker.phone.phoneNumber('+4477 #### ###'),
+    value: faker.phone.phoneNumber('+4477 #### ###'),
+    type: 'tel',
     get className() {
       return this.id
     },
   },
   {
-    id: 'password',
+    id: 'Password',
     icon: <AiIcons.AiFillLock />,
-    content: '*'.repeat(Math.floor(Math.random() * (12 - 8) + 8)),
+    value: '*'.repeat(Math.floor(Math.random() * (12 - 8) + 8)),
+    type: 'password',
     get className() {
       return this.id
     },

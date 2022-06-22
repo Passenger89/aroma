@@ -1,13 +1,13 @@
 import React from 'react'
 import Card from '../Card/Card.jsx'
-import './FeaturedSection.scss'
+import styles from './FeaturedSection.module.scss'
 import mellowRoast from '../../assets/images/beans/Beans - mellow.jpg'
 import darkRoast from '../../assets/images/beans/Beans - dark.jpg'
 import citrusRoast from '../../assets/images/beans/Beans - citrus.jpg'
 
 const FeaturedSection = () => {
   return (
-    <section className='section flex column gap'>
+    <section className={`${styles.section} flex column gap`}>
       <h2 className='section-title fs-500 fw-600'>
         Here's what we've been drinking lately...
       </h2>

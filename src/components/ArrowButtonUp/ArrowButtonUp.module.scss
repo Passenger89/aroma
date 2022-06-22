@@ -1,0 +1,22 @@
+@use '../../scss/variables' as var;
+
+.arrowButtonUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: var.$clr-medium-roast;
+  border: 2px solid #fff;
+  border-radius: 0 !important;
+
+  img {
+    transform: rotate(180deg);
+  }
+}
+
+@media (hover: hover) {
+  .arrowButtonUp:hover {
+    background-color: var.$clr-toasted-almond;
+  }
+}

@@ -1,0 +1,21 @@
+@use '../../scss/variables' as var;
+
+.form__field {
+  border: 1px solid var.$clr-medium-roast;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .input {
+    border: none;
+  }
+}
+
+.text__success {
+  margin-inline: auto;
+  color: green;
+}
+
+.hide {
+  display: none;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaqData } from './FaqData.jsx'
 import * as BiIcons from 'react-icons/bi'
-import './Accordion.scss'
+import styles from './Accordion.module.scss'
 
 const Accordion = () => {
   const [selected, setSelected] = useState(null)
@@ -15,13 +15,19 @@ const Accordion = () => {
 
   return (
     <div className='wrapper container margin-block'>
-      <div className='accordion'>
+      <ul
+        className={styles.accordion}
+        aria-label='Accordion Control Group Buttons'
+      >
         {FaqData.map((item, i) => {
           return (
-            <div className='item' key={i}>
-              <div
-                className='title flex space-betweenX centeredY padded fs-400 fw-500'
+            <li className={styles.item} key={i}>
+              <button
+                className={`${styles.title} flex space-betweenX centeredY padded fs-400 fw-500`}
                 onClick={() => toggle(i)}
+                aria-expanded={`${selected === i ? 'true' : 'false'}`}
+                aria-controls={`accordion-panel-${i}`}
+                id={`accordion-header-${i}`}
               >
                 <h2>{item.question}</h2>
                 <span>
@@ -31,18 +37,20 @@ const Accordion = () => {
                     <BiIcons.BiChevronDown />
                   )}
                 </span>
-              </div>
+              </button>
               <div
-                className={`content padded fs-500 fw-400 ${
-                  selected === i ? 'content show' : 'content'
+                className={`${styles.content} padded fs-500 fw-400 ${
+                  selected === i ? '' : 'sr-only'
                 }`}
+                id={`accordion-panel-${i}`}
+                aria-labelledby={`accordion-header-${i}`}
               >
                 {item.answer}
               </div>
-            </div>
+            </li>
           )
         })}
-      </div>
+      </ul>
     </div>
   )
 }

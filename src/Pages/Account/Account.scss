@@ -1,8 +1,0 @@
-@use '../../scss/variables' as var;
-
-.item {
-  border: 1px solid var.$clr-medium-roast;
-  .input {
-    border: none;
-  }
-}

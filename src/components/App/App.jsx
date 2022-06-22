@@ -15,6 +15,11 @@ import Help from '../../Pages/Help/Help.jsx'
 
 const App = () => {
   const [sidebar, setSidebar] = useState(false)
+  const [showModal, setShowModal] = useState(true) //! CHANGE BACK TO FALSE!!!
+
+  const handleShow = () => setShowModal(true)
+  const handleHide = () => setShowModal(false)
+
   return (
     <Router>
       <Header id='header' />
@@ -26,7 +31,16 @@ const App = () => {
         <Route path='/settings' element={<Settings />} />
         <Route path='/account' element={<Account />} />
         <Route path='/notifications' element={<Notifications />} />
-        <Route path='help' element={<Help />} />
+        <Route
+          path='help'
+          element={
+            <Help
+              showModal={showModal}
+              handleShow={handleShow}
+              handleHide={handleHide}
+            />
+          }
+        />
       </Routes>
       <NavBar sidebar={sidebar} toggleSidebar={setSidebar} />
       <NavSideBar sidebar={sidebar} toggleSidebar={setSidebar} />

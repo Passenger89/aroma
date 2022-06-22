@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ImageList from '../../components/ImageList/ImageList.jsx'
 import { useFetchImages } from '../../Hooks/useFetchImages.jsx'
-import './Gallery.scss'
+import styles from './Gallery.module.scss'
 
 const Gallery = () => {
   const [images, setImages] = useState([])

@@ -1,0 +1,16 @@
+@use '../../scss/variables' as var;
+
+.settingsItem {
+  background-color: var.$clr-medium-roast;
+  height: 3rem;
+
+  button {
+    width: 100%;
+    height: 100%;
+
+    .content__wrapper {
+      width: 10rem;
+      height: 100%;
+    }
+  }
+}

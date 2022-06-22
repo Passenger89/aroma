@@ -1,0 +1,19 @@
+@use '../../scss/variables' as var;
+
+.accordion {
+  .item {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+
+    .title {
+      color: var.$clr-medium-roast;
+      width: 100%;
+    }
+    .content {
+      color: var.$clr-dark-roast;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+      cursor: pointer;
+    }
+  }
+}

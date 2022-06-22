@@ -1,33 +1,131 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import MainButton from '../../components/MainButton/MainButton.jsx'
-import { AccountData } from '../../components/AccountData/AccountData.jsx'
-import './Account.scss'
+import { faker } from '@faker-js/faker'
+import * as AiIcons from 'react-icons/ai'
+import * as FaIcons from 'react-icons/fa'
+import * as IoIcons from 'react-icons/io'
+import styles from './Account.module.scss'
 
 const Account = () => {
+  const [name, setName] = useState(faker.name.findName())
+  const [address, setAddress] = useState(faker.address.streetAddress())
+  const [email, setEmail] = useState(faker.internet.email())
+  const [number, setNumber] = useState(
+    faker.phone.phoneNumber('+4477 #### ###')
+  )
+  const [password, setPassword] = useState('********')
+
+  const [showSuccess, setShowSuccess] = useState(false)
+  const [disabled, setDisabled] = useState(false)
+
+  useEffect(() => {
+    let name = window.localStorage.getItem('name')
+    let address = window.localStorage.getItem('address')
+    let email = window.localStorage.getItem('email')
+    let number = window.localStorage.getItem('number')
+    let password = window.localStorage.getItem('password')
+
+    setName(name)
+    setAddress(address)
+    setEmail(email)
+    setNumber(number)
+    setPassword(password)
+  }, [])
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    window.localStorage.setItem('name', name)
+    window.localStorage.setItem('address', address)
+    window.localStorage.setItem('email', email)
+    window.localStorage.setItem('number', number)
+    window.localStorage.setItem('password', password)
+
+    setShowSuccess(true)
+    setDisabled(true)
+
+    const successTimeout = setTimeout(() => {
+      setShowSuccess(false)
+      setDisabled(false)
+    }, 5000)
+    return () => {
+      clearTimeout(successTimeout)
+    }
+  }
+
   return (
-    <div className='flex column' onSubmit={e => e.preventDefault()}>
-      <form className='container flex gap column margin-block'>
-        <ul className='flex column gap'>
-          {AccountData.map((item, index) => {
-            return (
-              <li
-                key={index}
-                className={`${item.className} item flex gap padded centeredY clr-medium-roast`}
-              >
-                <label htmlFor={item.id} className='icon'>
-                  {item.icon}
-                </label>
-                <input
-                  id={item.id}
-                  className='input fs-400'
-                  type='text'
-                  placeholder={item.content}
-                />
-              </li>
-            )
-          })}
-        </ul>
-        <MainButton label='SAVE CHANGES' type='submit' />
+    <div className='container flex column margin-block'>
+      <form
+        className='container flex gap column margin-block'
+        onSubmit={handleSubmit}
+      >
+        <div className={styles.form__field}>
+          <label htmlFor='name' className='icon'>
+            <FaIcons.FaUser />
+          </label>
+          <input
+            id='name'
+            className={`${styles.input} fs-400`}
+            type='text'
+            onChange={e => setName(e.target.value)}
+            value={name}
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label htmlFor='address' className='icon'>
+            <IoIcons.IoIosPin />
+          </label>
+          <input
+            id='address'
+            className={`${styles.input} fs-400`}
+            type='text'
+            onChange={e => setAddress(e.target.value)}
+            value={address}
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label htmlFor='email' className='icon'>
+            <AiIcons.AiTwotoneMail />
+          </label>
+          <input
+            id='email'
+            className={`${styles.input} fs-400`}
+            type='email'
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label htmlFor='number' className='icon'>
+            <FaIcons.FaPhoneAlt />
+          </label>
+          <input
+            id='number'
+            className={`${styles.input} fs-400`}
+            type='tel'
+            onChange={e => setNumber(e.target.value)}
+            value={number}
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label htmlFor='password' className='icon'>
+            <AiIcons.AiFillLock />
+          </label>
+          <input
+            id='password'
+            className={`${styles.input} fs-400`}
+            type='password'
+            onChange={e => setPassword(e.target.value)}
+            value={password}
+          />
+        </div>
+        <p
+          className={`${styles.text__success} ${
+            !showSuccess ? styles.hide : ''
+          }`}
+        >
+          Changes Saved!
+        </p>
+        <MainButton label='SAVE CHANGES' type='submit' disabled={disabled} />
       </form>
     </div>
   )
