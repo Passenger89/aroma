@@ -7,8 +7,8 @@ import styles from './Store.module.scss'
 const Store = () => {
   useScrollToTop()
   return (
-    <div className='margin-block container'>
-      <h1>The Collection</h1>
+    <div className='margin-block container flex column gap'>
+      <h1 className='center-text'>The Collection</h1>
       <div className='flex column gap centeredY'>
         {StoreData.map(({ id, image, name, country, description, price }) => {
           return (

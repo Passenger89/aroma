@@ -12,10 +12,11 @@ import '../../scss/main.scss'
 import Account from '../../Pages/Account/Account.jsx'
 import Notifications from '../../Pages/Notifications/Notifications.jsx'
 import Help from '../../Pages/Help/Help.jsx'
+import SignUp from '../../Pages/SignUp/SignUp.jsx'
 
 const App = () => {
   const [sidebar, setSidebar] = useState(false)
-  const [showModal, setShowModal] = useState(true) //! CHANGE BACK TO FALSE!!!
+  const [showModal, setShowModal] = useState(false)
 
   const handleShow = () => setShowModal(true)
   const handleHide = () => setShowModal(false)
@@ -31,6 +32,7 @@ const App = () => {
         <Route path='/settings' element={<Settings />} />
         <Route path='/account' element={<Account />} />
         <Route path='/notifications' element={<Notifications />} />
+        <Route path='/signup' element={<SignUp />} />
         <Route
           path='help'
           element={

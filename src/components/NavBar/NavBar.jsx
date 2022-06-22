@@ -22,6 +22,12 @@ const NavBar = ({ sidebar, toggleSidebar }) => {
       case 'Help':
         return <BackButton path='/Settings' />
 
+      case 'Signup':
+        return <BackButton path='/Settings' />
+
+      case 'Login':
+        return <BackButton path='/Settings' />
+
       default:
         return (
           <ScrollIntoView selector='header'>

@@ -11,8 +11,8 @@ const Help = ({ showModal, handleShow, handleHide }) => {
   }
 
   return (
-    <div className='container flex column centeredX'>
-      <h1>FAQ</h1>
+    <div className='margin-block container flex column gap centeredX'>
+      <h1 className='center-text'>FAQ</h1>
       <Accordion />
 
       <h2 className='margin-inline-auto center-text'>Need to get in touch?</h2>
@@ -20,21 +20,30 @@ const Help = ({ showModal, handleShow, handleHide }) => {
       {showModal && (
         <Modal>
           <div className={styles.modal__wrapper}>
-            <div className={`${styles.modal} flex centeredY br-3`}>
+            <div
+              className={`${styles.modal} flex column centeredY space-aroundX br-3`}
+            >
+              <h1>Contact Us</h1>
               <form
                 className='container flex column centeredY centeredX gap'
                 onSubmit={handleSubmit}
               >
                 <div className={styles.form__field}>
-                  <label htmlFor='name'></label>
+                  <label className={styles.label} htmlFor='name'>
+                    Name
+                  </label>
                   <input id='name' className={styles.input} type='text' />
                 </div>
                 <div className={styles.form__field}>
-                  <label htmlFor='email'></label>
+                  <label className={styles.label} htmlFor='email'>
+                    Email
+                  </label>
                   <input id='email' className={styles.input} type='email' />
                 </div>
                 <div className={styles.form__field}>
-                  <label htmlFor='message'></label>
+                  <label className={styles.label} htmlFor='message'>
+                    Message
+                  </label>
                   <textarea
                     name='message'
                     className={styles.textArea}

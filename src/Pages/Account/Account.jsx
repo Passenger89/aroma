@@ -60,63 +60,100 @@ const Account = () => {
       >
         <div className={styles.form__field}>
           <label htmlFor='name' className='icon'>
-            <FaIcons.FaUser />
+            Name
           </label>
-          <input
-            id='name'
-            className={`${styles.input} fs-400`}
-            type='text'
-            onChange={e => setName(e.target.value)}
-            value={name}
-          />
+          <div className={`${styles.wrapper} flex gap centeredY`}>
+            <FaIcons.FaUser />
+            <input
+              id='name'
+              className={`${styles.input} fs-400`}
+              type='text'
+              onChange={e => setName(e.target.value)}
+              value={name}
+              placeholder='Full Name'
+              autoComplete='off'
+            />
+          </div>
         </div>
         <div className={styles.form__field}>
           <label htmlFor='address' className='icon'>
-            <IoIcons.IoIosPin />
+            Address
           </label>
-          <input
-            id='address'
-            className={`${styles.input} fs-400`}
-            type='text'
-            onChange={e => setAddress(e.target.value)}
-            value={address}
-          />
+
+          <div className={`${styles.wrapper} flex gap centeredY`}>
+            <IoIcons.IoIosPin />
+            <input
+              id='address'
+              className={`${styles.input} fs-400`}
+              type='text'
+              onChange={e => setAddress(e.target.value)}
+              value={address}
+            />
+          </div>
         </div>
         <div className={styles.form__field}>
           <label htmlFor='email' className='icon'>
-            <AiIcons.AiTwotoneMail />
+            Email
           </label>
-          <input
-            id='email'
-            className={`${styles.input} fs-400`}
-            type='email'
-            onChange={e => setEmail(e.target.value)}
-            value={email}
-          />
+
+          <div className={`${styles.wrapper} flex gap centeredY`}>
+            <AiIcons.AiTwotoneMail />
+            <input
+              id='email'
+              className={`${styles.input} fs-400`}
+              type='email'
+              onChange={e => setEmail(e.target.value)}
+              value={email}
+            />
+          </div>
         </div>
         <div className={styles.form__field}>
           <label htmlFor='number' className='icon'>
-            <FaIcons.FaPhoneAlt />
+            Phone
           </label>
-          <input
-            id='number'
-            className={`${styles.input} fs-400`}
-            type='tel'
-            onChange={e => setNumber(e.target.value)}
-            value={number}
-          />
+
+          <div className={`${styles.wrapper} flex gap centeredY`}>
+            <FaIcons.FaPhoneAlt />
+            <input
+              id='number'
+              className={`${styles.input} fs-400`}
+              type='tel'
+              onChange={e => setNumber(e.target.value)}
+              value={number}
+            />
+          </div>
         </div>
         <div className={styles.form__field}>
           <label htmlFor='password' className='icon'>
-            <AiIcons.AiFillLock />
+            Change Password
           </label>
-          <input
-            id='password'
-            className={`${styles.input} fs-400`}
-            type='password'
-            onChange={e => setPassword(e.target.value)}
-            value={password}
-          />
+
+          <div className={`${styles.wrapper} flex gap centeredY`}>
+            <AiIcons.AiFillLock />
+            <input
+              id='password'
+              className={`${styles.input} fs-400`}
+              type='password'
+              onChange={e => setPassword(e.target.value)}
+              value={password}
+            />
+          </div>
+        </div>
+        <div className={styles.form__field}>
+          <label htmlFor='password' className='icon'>
+            Confirm Password
+          </label>
+
+          <div className={`${styles.wrapper} flex gap centeredY`}>
+            <AiIcons.AiFillLock />
+            <input
+              id='password'
+              className={`${styles.input} fs-400`}
+              type='password'
+              onChange={e => setPassword(e.target.value)}
+              value={password}
+            />
+          </div>
         </div>
         <p
           className={`${styles.text__success} ${
