@@ -1,17 +1,13 @@
 @use '../../scss/variables' as var;
 
 .form__field {
-  justify-content: center;
-
-  .input {
+  .wrapper {
     border: 1px solid var.$clr-medium-roast;
     padding: 0.5rem;
-    font-size: var.$fs-400;
+    gap: 1rem;
+  }
+  .input {
+    border: none;
     flex: 1;
   }
-}
-
-.text__success {
-  margin-inline: auto;
-  color: green;
 }

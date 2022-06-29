@@ -1,0 +1,29 @@
+@use '../../scss/variables' as var;
+
+.input {
+  padding: 1rem;
+  border: 2px solid var.$clr-medium-roast;
+  background-color: var.$clr-flat-white;
+}
+.iconWrapper {
+  background: none;
+}
+.icon {
+  color: var.$clr-medium-roast;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var.$clr-toasted-almond inset;
+  -webkit-text-fill-color: var.$clr-dark-roast;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.btn_submit {
+  background-color: var.$clr-medium-roast;
+  color: var.$clr-flat-white;
+  font-size: var.$fs-500;
+  font-weight: var.$fw-semiBold;
+
+  padding: 0.75rem;
+}

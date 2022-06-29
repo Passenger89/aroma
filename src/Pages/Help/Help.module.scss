@@ -29,10 +29,15 @@
   .input {
     border: 2px solid var.$clr-medium-roast;
   }
-  .textArea {
-    resize: none;
-    border: 2px solid var.$clr-medium-roast;
-  }
+}
+
+.btn_submit {
+  background-color: var.$clr-medium-roast;
+  color: var.$clr-flat-white;
+  font-size: var.$fs-500;
+  font-weight: var.$fw-semiBold;
+
+  padding: 0.75rem;
 }
 
 .modal__btnHide {

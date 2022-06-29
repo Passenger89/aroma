@@ -2,10 +2,10 @@ import React from 'react'
 import MainButton from '../../components/MainButton/MainButton.jsx'
 import * as AiIcons from 'react-icons/ai'
 import * as FaIcons from 'react-icons/fa'
-import styles from './SignUp.module.scss'
+import styles from './Login.module.scss'
 import GoogleButton from '../../components/GoogleButton/GoogleButton.jsx'
 
-const SignUp = () => {
+const Login = () => {
   const handleSubmit = e => {
     e.preventDefault()
   }
@@ -18,7 +18,7 @@ const SignUp = () => {
       >
         <div className={styles.form__field}>
           <label htmlFor='name' className='icon'>
-            Username
+            username
           </label>
           <div className={`${styles.wrapper} flex gap centeredY`}>
             <FaIcons.FaUser />
@@ -27,22 +27,6 @@ const SignUp = () => {
               className={`${styles.input} fs-400`}
               type='text'
               placeholder='Full Name'
-              autoComplete='off'
-            />
-          </div>
-        </div>
-
-        <div className={`${styles.form__field} flex column`}>
-          <label htmlFor='email' className='icon'>
-            Email
-          </label>
-          <div className={`${styles.wrapper} flex gap centeredY`}>
-            <AiIcons.AiTwotoneMail />
-            <input
-              id='email'
-              className={`${styles.input} fs-400`}
-              type='email'
-              placeholder='Email'
               autoComplete='off'
             />
           </div>
@@ -63,19 +47,16 @@ const SignUp = () => {
             />
           </div>
         </div>
-        <p className='center-text'>
-          By creating an account you agree to our Terms of Service and Privacy
-          Policy
-        </p>
+
         <a className='center-text' href='#'>
-          Already have an account?
+          Create an account
         </a>
 
-        <MainButton label='SAVE CHANGES' type='submit' />
-        <GoogleButton label='SIGNUP WITH GOOGLE' />
+        <MainButton label='CONTINUE' type='submit' />
+        <GoogleButton label='LOGIN WITH GOOGLE' />
       </form>
     </div>
   )
 }
 
-export default SignUp
+export default Login

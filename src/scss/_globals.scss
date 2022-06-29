@@ -67,6 +67,19 @@ body {
   align-items: center;
 }
 
+.startX {
+  justify-content: start;
+}
+.startY {
+  align-items: start;
+}
+.endX {
+  justify-content: end;
+}
+.endY {
+  align-items: end;
+}
+
 .column {
   flex-direction: column;
 }

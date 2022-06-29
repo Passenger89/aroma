@@ -1,6 +1,7 @@
 import React from 'react'
 import FeedCard from '../../components/FeedCard/FeedCard.jsx'
 import { data } from '../../components/FeedCard/FeedCardData.jsx'
+import MainButton from '../../components/MainButton/MainButton.jsx'
 
 const Feed = () => {
   const feedCard = data.map(({ id, avatar, name, date, text, image }) => (
@@ -15,7 +16,9 @@ const Feed = () => {
   ))
   return (
     <div className='margin-block container'>
-      <div className='flex column gap centeredY'>{feedCard}</div>
+      <div className='flex column gap centeredY'>
+        {feedCard} <MainButton label='CREATE POST' />
+      </div>
     </div>
   )
 }
