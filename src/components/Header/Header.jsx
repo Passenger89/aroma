@@ -12,7 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to='/'>
-          <img src={logo2} alt='logo' />
+          <img className={styles.logo} src={logo2} alt='logo' />
         </Link>
 
         <img className={styles.shoppingbag} src={shoppingBag} alt='' />

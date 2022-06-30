@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'vivaldi';
+  src: url('../../assets/fonts/vivaldi/vivaldi.ttf');
+}
+@font-face {
+  font-family: 'vivaldii';
+  src: url('../../assets/fonts/vivaldi/VIVALDII.TTF');
+}
+
 .header {
   .container {
     position: relative;
@@ -6,6 +15,10 @@
     align-items: center;
     border-bottom: 3px solid #e4bc84;
     min-height: 4.6875rem;
+
+    .logo {
+      font-family: vivaldii, vivaldi;
+    }
   }
 
   .shoppingbag {
