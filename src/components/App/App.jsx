@@ -25,6 +25,7 @@ const App = () => {
   return (
     <Router>
       <Header id='header' />
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/gallery' element={<Gallery />} />
@@ -46,6 +47,7 @@ const App = () => {
           }
         />
       </Routes>
+
       <NavBar sidebar={sidebar} toggleSidebar={setSidebar} />
       <NavSideBar sidebar={sidebar} toggleSidebar={setSidebar} />
     </Router>

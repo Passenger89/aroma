@@ -4,7 +4,7 @@ import styles from './MainButton.module.scss'
 const MainButton = ({ label, disabled }) => {
   return (
     <button
-      className={`${styles.mainButton} fs-400 fw-600 ${
+      className={`${styles.mainButton} fs_400 fw_600 ${
         disabled ? 'disabled' : ''
       }`}
     >

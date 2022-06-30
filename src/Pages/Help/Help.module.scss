@@ -15,8 +15,9 @@
 .modal {
   position: relative;
   background-color: #fff;
-  height: 60%;
+  padding: 1rem;
   width: 80%;
+  max-width: 20rem;
 }
 
 .form__field {

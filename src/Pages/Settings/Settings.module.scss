@@ -1,8 +1,15 @@
 @use '../../scss/variables' as var;
 
+.ul {
+  flex: 1;
+  max-width: 30rem;
+}
+
 .settingsItem {
   background-color: var.$clr-medium-roast;
   height: 3rem;
+  width: 90%;
+  margin-inline: auto;
 
   button {
     width: 100%;

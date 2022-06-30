@@ -14,7 +14,7 @@ const Accordion = () => {
   }
 
   return (
-    <div className='wrapper container margin-block'>
+    <div className='wrapper container margin_block'>
       <ul
         className={styles.accordion}
         aria-label='Accordion Control Group Buttons'
@@ -23,7 +23,7 @@ const Accordion = () => {
           return (
             <li className={styles.item} key={i}>
               <button
-                className={`${styles.title} flex space-betweenX centeredY padded fs-400 fw-500`}
+                className={`${styles.title} flex space_betweenX centeredY padded fs_400 fw_500`}
                 onClick={() => toggle(i)}
                 aria-expanded={`${selected === i ? 'true' : 'false'}`}
                 aria-controls={`accordion-panel-${i}`}
@@ -39,8 +39,8 @@ const Accordion = () => {
                 </span>
               </button>
               <div
-                className={`${styles.content} padded fs-500 fw-400 ${
-                  selected === i ? '' : 'sr-only'
+                className={`${styles.content} padded fs_500 fw_400 ${
+                  selected === i ? '' : 'sr_only'
                 }`}
                 id={`accordion-panel-${i}`}
                 aria-labelledby={`accordion-header-${i}`}

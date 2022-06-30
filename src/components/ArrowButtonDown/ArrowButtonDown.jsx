@@ -4,7 +4,7 @@ import styles from './ArrowButtonDown.module.scss'
 
 const ArrowButtonDown = () => {
   return (
-    <button className={`${styles.arrowButtonDown} br-1`}>
+    <button className={`${styles.arrowButtonDown} br_1`}>
       <img src={downArrow} alt='' />
     </button>
   )

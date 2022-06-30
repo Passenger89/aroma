@@ -5,7 +5,7 @@ export const useFetchImages = (term, images, setImages) => {
   useEffect(() => {
     async function getResponse() {
       const response = await unsplash.get('/search/photos', {
-        params: { query: term, per_page: 50 },
+        params: { query: term, per_page: 30 },
       })
       setImages(response.data.results)
       return images

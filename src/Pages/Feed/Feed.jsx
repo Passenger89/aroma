@@ -15,7 +15,7 @@ const Feed = () => {
     />
   ))
   return (
-    <div className='margin-block container'>
+    <div className='margin_block container'>
       <div className='flex column gap centeredY'>
         {feedCard} <MainButton label='CREATE POST' />
       </div>

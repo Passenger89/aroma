@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Accordion from '../../components/Accordion/Accordion.jsx'
-import MainButton from '../../components/MainButton/MainButton.jsx'
 import Modal from '../../components/Modal/Modal.jsx'
 import * as AiIcons from 'react-icons/ai'
 import styles from './Help.module.scss'
@@ -53,17 +52,17 @@ const Help = ({ showModal, handleShow, handleHide }) => {
   }
 
   return (
-    <div className='margin-block container flex column gap centeredX'>
-      <h1 className='center-text'>FAQ</h1>
+    <div className='margin_block container flex column gap centeredX'>
+      <h1 className='center_text'>FAQ</h1>
       <Accordion />
 
-      <h2 className='margin-inline-auto center-text'>Need to get in touch?</h2>
+      <h2 className='margin_inline_auto center_text'>Need to get in touch?</h2>
       <button onClick={handleShow}>Contact</button>
       {showModal && (
         <Modal>
           <div className={styles.modal__wrapper}>
             <div
-              className={`${styles.modal} flex column centeredY space-aroundX br-3`}
+              className={`${styles.modal} flex column centeredY space_aroundX br_3`}
             >
               <h1>Contact Us</h1>
               <Container>
@@ -75,7 +74,7 @@ const Help = ({ showModal, handleShow, handleHide }) => {
                 >
                   <Stack
                     direction='column'
-                    justifyContent='space-evenly'
+                    justifyContent='space_evenly'
                     spacing={2}
                     mt={2}
                   >

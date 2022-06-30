@@ -5,7 +5,7 @@ import styles from './GoogleButton.module.scss'
 const GoogleButton = ({ label }) => {
   return (
     <button
-      className={`${styles.googleButton} fs-400 fw-600 flex centeredY gap padded`}
+      className={`${styles.googleButton} fs_400 fw_600 flex centeredY gap padded`}
     >
       <BsIcons.BsGoogle />
       {label}

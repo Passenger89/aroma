@@ -37,10 +37,10 @@ const NavBar = ({ sidebar, toggleSidebar }) => {
     }
   }
   return (
-    <div className={`${styles.navBar} bg-dark`}>
+    <div className={`${styles.navBar} bg_dark`}>
       <div className={styles.container}>
         <img src={menuIcon} alt='' onClick={() => toggleSidebar(!sidebar)} />
-        <h3 className='clr-white'>{pathname}</h3>
+        <h3 className='clr_white'>{pathname}</h3>
 
         {renderSwitch(pathname)}
       </div>

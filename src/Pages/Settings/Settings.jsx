@@ -5,15 +5,15 @@ import styles from './Settings.module.scss'
 
 const Settings = () => {
   return (
-    <nav className='container margin-block'>
-      <ul className='flex column gap'>
+    <nav className=' flex centeredX margin_block'>
+      <ul className={`${styles.ul} flex column gap`}>
         {SettingsData.map((item, index) => {
           return (
             <li key={index} className={item.className}>
               <Link to={item.path}>
-                <button className='flex flex-startX clr-white padded'>
+                <button className='flex flex_startX clr_white padded'>
                   <div
-                    className={`${styles.content__wrapper} flex gap centeredY fs-300 fw-600`}
+                    className={`${styles.content__wrapper} flex gap centeredY fs_300 fw_600`}
                   >
                     {item.icon}
                     {item.title}

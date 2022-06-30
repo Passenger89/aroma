@@ -3,7 +3,7 @@ import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch.jsx'
 
 const Notifications = () => {
   return (
-    <div className='container margin-block flex column'>
+    <div className='container margin_block flex column'>
       <div className='flex centeredY gap'>
         <p>Would you like to hear from us?</p>
         <ToggleSwitch Name='newsletter' />

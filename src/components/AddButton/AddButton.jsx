@@ -4,7 +4,7 @@ import plus from '../../assets/svgs/plus.svg'
 
 const AddButton = () => {
   return (
-    <button className={`${styles.arrowButtonDown} br-1`}>
+    <button className={`${styles.arrowButtonDown} br_1`}>
       <img src={plus} alt='' />
     </button>
   )

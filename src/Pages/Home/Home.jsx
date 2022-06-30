@@ -1,4 +1,5 @@
 import React from 'react'
+import useIsDesktop from '../../Hooks/useIsDesktop.jsx'
 import ScrollIntoView from 'react-scroll-into-view'
 import hero from '../../assets/images/hero.gif'
 import barista from '../../assets/images/barista.jpg'
@@ -9,29 +10,44 @@ import FeaturedSection from '../../components/FeaturedSection/FeaturedSection.js
 import { Link } from 'react-router-dom'
 
 const Home = () => {
+  const isDesktop = useIsDesktop()
   return (
-    <div className='margin-bottom flex column gap'>
+    <div className='margin_bottom flex column gap'>
       <div className={styles.hero}>
-        <img
-          className='hero__image'
-          src={hero}
-          alt='coffee pouring into glass cup'
-        />
-        <div className={`${styles.container} flex column gap`}>
-          <h1 className='fs-600 fw-600'>Average Joe? Not exactly...</h1>
-          <div className={`${styles.content} flex`}>
-            <div className={`${styles.left} flex column`}>
-              <p className='fs-300 fw-500 clr-medium-roast'>
-                Each bean is carefully sourced and lovingly brewed to bring
-                nothing but perfection to your cup of coffee.
-              </p>
-              <ScrollIntoView selector='#featured'>
-                <ArrowButtonDown />
-              </ScrollIntoView>
+        <div className={styles.hero__image_wrapper}>
+          <img
+            className={styles.hero__image}
+            src={hero}
+            alt='coffee pouring into glass cup'
+          />
+        </div>
+        <div className={`${styles.hero__container} flex column gap container`}>
+          <h1
+            className={`${styles.hero__heading} ${
+              isDesktop ? 'fs_700 fw_600' : 'fs_600 fw_600'
+            }  margin_block`}
+          >
+            Average Joe? Not exactly...
+          </h1>
+          <div className={`flex margin_block`}>
+            <div className={`${styles.content__left} flex centeredX`}>
+              <div className='flex column gap' style={{ width: '80%' }}>
+                <p
+                  className={`${styles.left__text} ${
+                    isDesktop ? 'fs_500' : 'fs_300'
+                  } fw_500 clr_medium_roast`}
+                >
+                  Each bean is carefully sourced and lovingly brewed to bring
+                  nothing but perfection to your cup of coffee.
+                </p>
+                <ScrollIntoView selector='#featured'>
+                  <ArrowButtonDown />
+                </ScrollIntoView>
+              </div>
             </div>
-            <div className={styles.right}>
+            <div className={styles.content__right}>
               <img
-                className='br-1'
+                className='br_1'
                 src={barista}
                 alt='male barista pouring coffee'
               />

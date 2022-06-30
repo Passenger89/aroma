@@ -6,7 +6,7 @@ import styles from './BackButton.module.scss'
 const BackButton = ({ path }) => {
   return (
     <Link to={path}>
-      <button className={`${styles.backButton} br-1`}>
+      <button className={`${styles.backButton} br_1`}>
         <img src={downArrow} alt='' />
       </button>
     </Link>

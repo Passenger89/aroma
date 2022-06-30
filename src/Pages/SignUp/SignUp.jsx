@@ -11,9 +11,9 @@ const SignUp = () => {
   }
 
   return (
-    <div className='container flex column margin-block clr-medium-roast'>
+    <div className='container flex column margin_block clr_medium_roast'>
       <form
-        className='container flex gap column margin-block'
+        className='container flex gap column margin_block'
         onSubmit={handleSubmit}
       >
         <div className={styles.form__field}>
@@ -24,7 +24,7 @@ const SignUp = () => {
             <FaIcons.FaUser />
             <input
               id='name'
-              className={`${styles.input} fs-400`}
+              className={`${styles.input} fs_400`}
               type='text'
               placeholder='Full Name'
               autoComplete='off'
