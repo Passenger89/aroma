@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { usePathName } from '../../Hooks/usePathName.jsx'
 import styles from './Header.module.scss'
-import logo from '../../assets/svgs/logo.svg'
+import logo2 from '../../assets/svgs/logo2.svg'
 import shoppingBag from '../../assets/svgs/shopping-bag.svg'
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to='/'>
-          <img src={logo} alt='logo' />
+          <img src={logo2} alt='logo' />
         </Link>
 
         <img className={styles.shoppingbag} src={shoppingBag} alt='' />
